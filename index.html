@@ -4,103 +4,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <script src="https://kit.fontawesome.com/dd34b8251f.js" crossorigin="anonymous"></script>
-    <style media="all" id="fa-v4-font-face"></style>
+    <script src="https://kit.fontawesome.com/f51a273024.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-    <div class="general">
-        <div class="encabezado">
-            <div class="encabezado1">
-                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fa-brands fa-instagram"></i>Instagram
+            </a>
+            <div class="ms-auto">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Create a new Post
+                </button>
+                <!-- Example single danger button -->
             </div>
-            <div class="encabezado2">
-                <p>Instagram</p>
-            </div>
-            <div class="encabezado3">
-                <button type="button" class="btn btn-success">Create a new post</button>
-
-            </div>
-            <div class="encabezado4">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                    <div class="container-fluid">
-
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
-                                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Log Out</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new Post</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Caption:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                    <i class="fa-solid fa-camera"></i>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Send message</button>
                         </div>
                     </div>
-                </nav>
-
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-togger" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-gear"></i></button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+            </div>
+            </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </nav>
+    <ul class="nav nav-pills mb-3 mt-3 justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-columna-tab" data-bs-toggle="pill" data-bs-target="#pills-columna"
+                type="button" role="tab" aria-controls="pills-columna" aria-selected="true">
+                <i class="fa-solid fa-square"></i>
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-cuadricula-tab" data-bs-toggle="pill" data-bs-target="#pills-cuadricula"
+                type="button" role="tab" aria-controls="pills-cuadricula" aria-selected="false">
+                <i class="fa-solid fa-table-cells"></i>
+            </button>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-columna" role="tabpanel" aria-labelledby="pills-columna-tab"
+            tabindex="0">
+            <div class="card border-black mb-3" style="max-width: 40rem; margin: 0 auto;">
+                <div class="row card-header bg-transparent border-black m-0">
+                    <div class="col-10">Beisbol (MLB)</div>
+                    <div class="col-2 headSpace">08/21</div>
+                </div>
+                <div class="card-body p-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Angels_Stadium.JPG/1280px-Angels_Stadium.JPG"
+                        class="card-img-top fitCoverSingle" alt="...">
+                </div>
+                <div class="card-footer bg-transparent border-black">
+                    <h5 class="card-title">488 Likes</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                </div>
+            </div>
+            <div class="card border-black mb-3" style="max-width: 40rem; margin: 0 auto;">
+                <div class="row card-header bg-transparent border-black m-0">
+                    <div class="col-10">Futbol (Spain League)</div>
+                    <div class="col-2 headSpace">02/10</div>
+                </div>
+                <div class="card-body p-0">
+                    <img src="https://elcomercio.pe/resizer/EJ7hz9FDo5vEpoMTThsMJ4i9UZA=/980x0/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/ZMLT2QDL4JDYPA7GGE2AQJOVDU.jpg"
+                        class="card-img-top fitCoverSingle" alt="...">
+                </div>
+                <div class="card-footer bg-transparent border-black">
+                    <h5 class="card-title">292 Likes</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                </div>
+            </div>
+            <div class="card border-black mb-3" style="max-width: 40rem; margin: 0 auto;">
+                <div class="row card-header bg-transparent border-black m-0">
+                    <div class="col-10">Basketball (NBA)</div>
+                    <div class="col-2 headSpace">29/12</div>
+                </div>
+                <div class="card-body p-0">
+                    <img src="https://media2.miaminewtimes.com/mia/imager/name-the-aa-arena-after-these-miami-institutions-if-bangbros-doesnt-win-the-bid/u/magnum/11270286/miami_heat_at_american_airlines.jpg?cb=1642609224"
+                        class="card-img-top fitCoverSingle" alt="...">
+                </div>
+                <div class="card-footer bg-transparent border-black">
+                    <h5 class="card-title">212 Likes</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                </div>
             </div>
         </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 float-start">
-                <img
-                    src="https://www.papelpintado.com/media/catalog/product/cache/39df7e05fcdeb150001268a7a074dc57/b/e/behang-caribbean_9.jpg">
-            </div>
-            <div class="col-4 mx-auto d-block">
-                <img
-                    src="https://www.mundodeportivo.com/urbantecno/hero/2023/10/estas-son-algunas-de-las-mejores-webs-con-las-que-podras-vectorizar-imagenes-de-forma-gratuita-y-sin-instalar-nada.jpg?width=1200&aspect_ratio=16:9">
-            </div>
-            <div class="col-4 float-end">
-                <img
-                    src="https://i.blogs.es/d559d0/jlacort_happy_elephant_running_across_the_desert._4k_26e6e27c-dbd6-4b14-b8ba-ac0841f2c25f/1366_2000.jpeg">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 float-start">
-                <img
-                    src="https://www.papelpintado.com/media/catalog/product/cache/39df7e05fcdeb150001268a7a074dc57/b/e/behang-caribbean_9.jpg">
-            </div>
-            <div class="col-4 mx-auto d-block">
-                <img
-                    src="https://www.mundodeportivo.com/urbantecno/hero/2023/10/estas-son-algunas-de-las-mejores-webs-con-las-que-podras-vectorizar-imagenes-de-forma-gratuita-y-sin-instalar-nada.jpg?width=1200&aspect_ratio=16:9">
-            </div>
-            <div class="col-4 float-end">
-                <img
-                    src="https://i.blogs.es/d559d0/jlacort_happy_elephant_running_across_the_desert._4k_26e6e27c-dbd6-4b14-b8ba-ac0841f2c25f/1366_2000.jpeg">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 float-start">
-                <img
-                    src="https://www.papelpintado.com/media/catalog/product/cache/39df7e05fcdeb150001268a7a074dc57/b/e/behang-caribbean_9.jpg">
-            </div>
-            <div class="col-4 mx-auto d-block">
-                <img
-                    src="https://www.mundodeportivo.com/urbantecno/hero/2023/10/estas-son-algunas-de-las-mejores-webs-con-las-que-podras-vectorizar-imagenes-de-forma-gratuita-y-sin-instalar-nada.jpg?width=1200&aspect_ratio=16:9">
-            </div>
-            <div class="col-4 float-end">
-                <img
-                    src="https://i.blogs.es/d559d0/jlacort_happy_elephant_running_across_the_desert._4k_26e6e27c-dbd6-4b14-b8ba-ac0841f2c25f/1366_2000.jpeg">
+        <div class="tab-pane fade" id="pills-cuadricula" role="tabpanel" aria-labelledby="pills-cuadricula-tab"
+            tabindex="0">
+            <div class="row">
+                <div class="card-group">
+                    <div class="card">
+                        <img src="https://s.yimg.com/ny/api/res/1.2/2lWGlFgtPDEN_iKxEfUkIg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTI0MDA7aD0xNjAwO2NmPXdlYnA-/https://s.yimg.com/os/creatr-uploaded-images/2021-06/b7a9fed0-d5cf-11eb-a6ee-59b51abe0717"
+                            class="card-img-top object-fit-cover h-100" alt="...">
+                    </div>
+                    <div class="card">
+                        <img src="https://cdn.vox-cdn.com/thumbor/HSMHhjGIDB4LYn4x0LWExX1gky8=/0x0:3000x2100/1220x813/filters:focal(1067x860:1547x1340):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/73109315/577099346.0.jpg"
+                            class="card-img-top fitCover" alt="...">
+                    </div>
+                    <div class="card">
+                        <img src="https://phantom-marca.unidadeditorial.es/7b218a27933fab5c0771fa1c030caf62/resize/828/f/jpg/assets/multimedia/imagenes/2023/02/06/16757115552230.jpg"
+                            class="card-img-top fitCover" alt="...">
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card">
+                        <img src="https://s.libertaddigital.com/fotos/noticias/1920/1080/fit/iker_casillas_14022015.jpg"
+                            class="card-img-top object-fit-cover h-100" alt="...">
+                    </div>
+                    <div class="card">
+                        <img src="https://icdn.football-italia.net/wp-content/uploads/2022/04/h_01877856.jpg"
+                            class="card-img-top fitCover" alt="...">
+                    </div>
+                    <div class="card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Beijing_Olympics_Men%27s_Semifinal_Basketball_USA_huddle.jpg/1280px-Beijing_Olympics_Men%27s_Semifinal_Basketball_USA_huddle.jpg"
+                            class="card-img-top fitCover" alt="...">
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card">
+                        <img src="https://cdn2.mediotiempo.com/uploads/media/2019/03/28/figo-llegar-real-madrid-momentos.jpg"
+                            class="card-img-top object-fit-cover h-100" alt="...">
+                    </div>
+                    <div class="card">
+                        <img src="https://noticiasdeportivas.com.ve/wp-content/uploads/2023/09/15685-1.jpg"
+                            class="card-img-top fitCover" alt="...">
+                    </div>
+                    <div class="card">
+                        <img src="https://www.nbamaniacs.com/wp-content/uploads/2024/03/GettyImages-2059260824-768x512.jpg"
+                            class="card-img-top fitCover" alt="...">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
